@@ -1,0 +1,28 @@
+
+
+.header {
+    background-color: steelblue;
+    grid-area: h;
+
+    float: left;
+    position: relative;
+
+    /*display: inline-block;*/
+    font-family: 'Fredoka One', cursive;
+    font-size: large;
+    color: bisque;
+    box-shadow: 0em 0.26em 5px rgba(122,122,122,0.5);
+
+}
+
+
+.header .logotext {
+    position: absolute;
+    top: 20%;
+    left: 6vw;
+
+}
+.header img {
+    width: 50px;
+
+}

@@ -1,0 +1,16 @@
+.wrapperMessages {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-areas: "dialogList messages";
+}
+
+.dialogList {
+    grid-area: dialogList;
+    padding: 10px;
+
+}
+
+
+.messages{
+    grid-area: messages;
+}

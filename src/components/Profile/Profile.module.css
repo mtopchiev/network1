@@ -4,9 +4,9 @@
     display: grid;
     grid-template-columns: 150px 1fr 1fr;
     grid-template-rows: 130px 1fr;
-    grid-template-areas: "a d d"
-                        "mp mp mp"
+    grid-template-areas:"info info info"
                         "mp mp mp";
+
 
     padding: 7% 7% 3% 7%;
 }
@@ -15,15 +15,8 @@
     grid-area: mp;
 }
 
-/*.ava img {*/
-/*    width: 100px;*/
-/*    border-radius: 10%;*/
-/*    grid-area: a;*/
 
-/*}*/
+.profileInfo {
+    grid-area: info;
 
-/*.data {*/
-/*    margin-top: 10px;*/
-/*    grid-area: d;*/
-/*}*/
-
+}

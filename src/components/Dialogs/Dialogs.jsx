@@ -3,30 +3,30 @@ import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 
 
-const Dialogs = () => {
-    return (
+const Dialogs = (props) => {
 
+    let dialogsList = props.state.dialogsData.map( el =>(
+        <DialogItem id ={el.id} name={el.name} />
+        )
+    )
+
+
+
+    let messsagesList = props.state.messagesData.map(
+        el => (<div>{el.message}</div>)
+    );
+
+    return (
         <div className={s.wrapperMessages}>
 
             <div className={s.dialogList}>
-                <DialogItem name="Mikhail" id={1}/>
-                <DialogItem name="Dmitriy" id={2}/>
-                <DialogItem name="Mariya" id={3}/>
-                <DialogItem name="Diana" id={4}/>
-                <DialogItem name="Alex" id={5}/>
-                <DialogItem name="Petr" id={6}/>
+                {dialogsList}
             </div>
 
             <div className={s.chat}>
-                Message 1
-                Message 2
-                Message 3
-
+                {messsagesList}
             </div>
-
         </div>
-
-
     )
 }
 

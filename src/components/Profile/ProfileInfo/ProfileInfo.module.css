@@ -1,29 +1,18 @@
+.profileInfoWrapper {
+    display: inline-flex;
 
-/*.content {*/
-
-/*    display: grid;*/
-/*    grid-template-columns: 150px 1fr 1fr;*/
-/*    grid-template-rows: 130px 1fr;*/
-/*    grid-template-areas: "a d d"*/
-/*                        "mp mp mp"*/
-/*                        "mp mp mp";*/
-
-/*    padding: 7% 7% 3% 7%;*/
-/*}*/
-
-.myposts {
-    grid-area: mp;
 }
 
 .ava img {
     width: 100px;
     border-radius: 10%;
-    grid-area: a;
+    margin-right: 30px;
+
 
 }
 
 .data {
     margin-top: 10px;
-    grid-area: d;
+
 }
 

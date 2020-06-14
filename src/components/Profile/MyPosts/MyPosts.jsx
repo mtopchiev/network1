@@ -3,11 +3,19 @@ import s2 from './MyPosts.module.css'
 import Post from "./Post/Post";
 
 
-const MyPosts = () => {
+
+
+
+
+const MyPosts = (props) => {
+    let  postsList =props.dataPosts.map(el => {
+        return <Post message={el.postText} liked={el.likesCounter}/>
+
+    } );
+
+
     return (
         <div className={s2.content}>
-
-
             <div className={s2.messanger}>
                 My Posts
                 <p/>
@@ -18,12 +26,7 @@ const MyPosts = () => {
 
 
             <div className={s2.posts}>
-
-                <Post message='Hello Mike!' liked={5}/>
-                <Post message="Message 1" liked="3"/>
-                <Post message="Message 2" liked="3"/>
-                <Post message="Message 3" liked="3"/>
-
+                {postsList}
 
 
             </div>

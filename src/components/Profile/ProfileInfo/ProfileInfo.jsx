@@ -2,21 +2,21 @@ import React  from 'react';
 import s from './ProfileInfo.module.css'
 
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
 
         <React.Fragment>
             <div className={s.profileInfoWrapper}>
                 <div className={s.ava}>
-                    <img src="https://avatars.mds.yandex.net/get-pdb/1751508/5ce53352-7bf5-4b8b-801c-a4f1a7e06a0d/s1200"
+                    <img src={props.state.avaimg}
                          alt=""/>
                 </div>
 
                 <div className={s.data}>
-                    <div className="Name">Name: Michael T</div>
-                    <div className="Birth">Date of Birth: 2 january</div>
-                    <div className="City">City: Krasnoyarsk</div>
-                    <div className="HSchool">Education: SFU'15</div>
+                    <div className="Name">Name: {props.state.profileName}</div>
+                    <div className="Birth">Date of Birth: {props.state.profileBirth}</div>
+                    <div className="City">City: {props.state.profileCity}</div>
+                    <div className="HSchool">Education: {props.state.profileHSchool}</div>
                 </div>
             </div>
 
@@ -27,3 +27,4 @@ const ProfileInfo = () => {
 }
 
 export default ProfileInfo;
+

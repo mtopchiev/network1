@@ -1,6 +1,6 @@
 .wrapperMessages {
     display: grid;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 2fr 8fr;
     grid-template-areas: "dialogList messages";
 }
 
@@ -13,4 +13,15 @@
 
 .messages{
     grid-area: messages;
+}
+
+.chat {
+    margin: 3%;
+    padding: 3%;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.chat li{
+    border: #5093cb solid 1px;
 }

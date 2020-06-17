@@ -14,7 +14,7 @@
 
 .content {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 120px 1fr 1fr;
     grid-template-columns: 400px 1fr;
     grid-template-areas: "m m"
                            "p p"

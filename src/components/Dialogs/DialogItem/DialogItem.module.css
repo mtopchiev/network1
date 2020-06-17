@@ -1,10 +1,24 @@
 
 
 .dialogItem {
-
+border: black solid 1px;
 }
+
+.dialogItem a {
+    text-decoration: none;
+    color: steelblue;
+    font-size: large;
+    }
 
 
 .dialogItem .active {
     color: gold;
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+
+    /*padding-top: 10px;*/
+    /*margin-right: 30px;*/
 }

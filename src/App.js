@@ -6,34 +6,30 @@ import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
 import Dialogs from "./components/Dialogs/Dialogs";
 
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 
 function App(props) {
 
     return (
-        <BrowserRouter>
-            <div className="app-wrapper">
-                <Header/>
-                <Navbar/>
-                <div className="content-wrapper">
-                    <Route path="/profile" render={()=><Profile state={props.state.profilePage}
-                                                                addPost={props.addPost}
-                                                                updateNewPostText={props.updateNewPostText}
-                                                        />}/>
-                    <Route path="/dialogs">         <Dialogs state={props.state.dialogsPage}
-                                                            updateNewMessage={props.updateNewMessage}
-                                                            addMessage={props.addMessage}/></Route>
-                    <Route path="/music" />
-                    <Route path="/news" />
+        <div className="app-wrapper">
+            <Header/>
+            <Navbar/>
+            <div className="content-wrapper">
+                <Route path="/profile" render={() => <Profile state={props.state.profilePage}
+                                                              store={props.store}
 
-                </div>
-                <Footer/>
+                />}/>
+                <Route path="/dialogs"> <Dialogs state={props.state.dialogsPage}
+                                                 store={props.store}
 
-
+                /></Route>
+                <Route path="/music"/>
+                <Route path="/news"/>
             </div>
-        </BrowserRouter>
-        );
-        }
+            <Footer/>
+        </div>
+    );
+}
 
-            export default App;
+export default App;

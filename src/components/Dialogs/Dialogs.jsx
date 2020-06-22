@@ -21,14 +21,14 @@ const Dialogs = (props) => {
 
 
     let addMessageToChat = () => {
-        props.addMessage();
+        props.store.addMessage();
 
 
     }
-
+debugger
     let onMessageUpdate = ()=> {
         let text = addMessageElement.current.value;
-        props.updateNewMessage(text);
+        props.store.updateNewMessage(text);
     }
 
 

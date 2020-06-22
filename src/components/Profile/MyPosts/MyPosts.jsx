@@ -2,7 +2,6 @@ import React from 'react';
 import s2 from './MyPosts.module.css'
 import Post from "./Post/Post";
 
-
 const MyPosts = (props) => {
     let postsList = props.dataPosts.map(el => {
         return <Post message={el.postText} liked={el.likesCounter}/>
